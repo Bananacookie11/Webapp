@@ -21,3 +21,4 @@ logs/
 .capacitor/
 .vite/
 *.local
+node_modules
