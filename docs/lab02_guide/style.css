@@ -10,7 +10,7 @@ body {
 /* ส่วนหัว (Header) */
 header {
     /* background-color: #A01E25; */ /* คอมเมนต์หรือลบสีเดิมออก */
-    background-color: #fe9310; /* เปลี่ยนเป็นสีเทาเข้ม */
+    background-color: #ff8c42; /* เปลี่ยนเป็นสีเทาเข้ม */
     color: white;
     text-align: center;
     padding: 2rem 1rem;
@@ -73,6 +73,66 @@ footer {
     background-color: #333;
     color: white;
 }
+
+
+
+.form-container {
+    background: white;
+    padding: 30px;
+    width: 450px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.form-container h2 {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.underline {
+    width: 60px;
+    height: 4px;
+    background: #ff8c42;
+    margin: 10px auto 20px;
+    border-radius: 2px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    transition: 0.25s;
+}
+
+input:focus, textarea:focus {
+    border-color: #ff8c42;
+    box-shadow: 0 0 6px rgba(255,140,66,0.4);
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to right, #ff8c42, #ff6a00);
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+
 /* Media Query สำหรับหน้าจอขนาดเล็ก (เช่น มือถือ) */
 /* เมื่อความกว้างหน้าจอน้อยกว่าหรือเท่ากับ 600px */
 @media (max-width: 600px) {
