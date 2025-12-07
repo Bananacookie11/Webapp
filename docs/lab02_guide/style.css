@@ -1,0 +1,96 @@
+/* การตั้งค่าพื้นฐานและแบบอักษร */
+body {
+    font-family: 'Sarabun', sans-serif; /* แนะนำให้ใช้ Google Fonts เพื่อความสวยงาม */
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f4f4f4; /* สีพื้นหลังเว็บ */
+    color: #333;
+}
+
+/* ส่วนหัว (Header) */
+header {
+    /* background-color: #A01E25; */ /* คอมเมนต์หรือลบสีเดิมออก */
+    background-color: #fe9310; /* เปลี่ยนเป็นสีเทาเข้ม */
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+/* ========== KKU Guide Pin Logo Styles ========== */
+
+#logoCanvas {
+    display: block; /* ทำให้ canvas ไม่มีระยะห่างใต้ภาพ */
+    margin: 0 auto 1rem; /* จัดกึ่งกลาง และเว้นระยะห่างด้านล่าง */
+    width: 300px; /* กำหนดความกว้างที่แสดงผล */
+    height: 120px; /* กำหนดความสูงที่แสดงผล */
+    cursor: pointer; /* ทำให้เมาส์เป็นรูปนิ้วชี้เมื่อชี้ที่โลโก้ */
+}
+
+
+
+/* ส่วนเนื้อหาหลัก (Main) */
+main {
+    max-width: 960px; /* กำหนดความกว้างสูงสุดของเนื้อหา */
+    margin: 2rem auto; /* จัดให้อยู่กึ่งกลางหน้าจอ */
+    padding: 0 1rem;
+}
+
+/* การ์ดแสดงข้อมูลแต่ละสถานที่ (Location Card) */
+.location-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* ทำให้ขอบมน */
+    margin-bottom: 2rem; /* ระยะห่างระหว่างการ์ด */
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* เพิ่มเงาให้ดูมีมิติ */
+}
+
+.location-card h2 {
+    color: #A01E25;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 0.5rem;
+}
+
+/* แกลเลอรีรูปภาพ */
+.image-gallery {
+    display: flex; /* จัดเรียงรูปภาพในแนวนอน */
+    gap: 1rem; /* ระยะห่างระหว่างรูปภาพ */
+    margin: 1rem 0;
+}
+
+.image-gallery img {
+    width: 50%; /* ให้รูปภาพแบ่งพื้นที่กันคนละครึ่ง */
+    height: auto;
+    border-radius: 4px; /* ทำให้รูปภาพขอบมน */
+    object-fit: cover; /* ป้องกันภาพบิดเบี้ยว */
+}
+
+/* ส่วนท้าย (Footer) */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    background-color: #333;
+    color: white;
+}
+/* Media Query สำหรับหน้าจอขนาดเล็ก (เช่น มือถือ) */
+/* เมื่อความกว้างหน้าจอน้อยกว่าหรือเท่ากับ 600px */
+@media (max-width: 600px) {
+
+    header {
+        padding: 1.5rem 1rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem; /* ลดขนาดตัวอักษรหัวข้อใหญ่ */
+    }
+
+    /* เปลี่ยนการจัดเรียงรูปภาพเป็นแนวตั้ง */
+    .image-gallery {
+        flex-direction: column; /* เปลี่ยนจากแนวนอนเป็นแนวตั้ง */
+    }
+
+    .image-gallery img {
+        width: 100%; /* ทำให้รูปภาพเต็มความกว้างของการ์ด */
+    }
+}
