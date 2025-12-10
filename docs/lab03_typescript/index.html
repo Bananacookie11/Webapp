@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Student Management System</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="p-4">
+    <h2 class="mb-4">ระบบจัดการนักศึกษา (Student Management System)</h2>
+
+
+    <div class="card p-3 mb-4">
+      <h5>➕ เพิ่มนักศึกษา</h5>
+      <div class="row g-3 align-items-end">
+        <div class="col-md-2">
+          <label for="id" class="form-label">รหัสนักศึกษา</label>
+          <input
+            id="id"
+            type="text"
+            class="form-control"
+            placeholder="65xxxxxxxx-x"
+          />
+        </div>
+        <div class="col-md-2">
+          <label for="title_name" class="form-label">คำนำหน้า</label>
+          <input
+            id="title_name"
+            type="text"
+            class="form-control"
+            placeholder="นาย/นางสาว"
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="first_name" class="form-label">ชื่อจริง</label>
+          <input
+            id="first_name"
+            type="text"
+            class="form-control"
+            placeholder="สมชาย"
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="last_name" class="form-label">นามสกุล</label>
+          <input
+            id="last_name"
+            type="text"
+            class="form-control"
+            placeholder="ใจดี"
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="email" class="form-label">อีเมล</label>
+          <input
+            id="email"
+            type="email"
+            class="form-control"
+            placeholder="somsak.j@kkumail.com"
+          />
+        </div>
+        <div class="col-md-2">
+          <label for="year" class="form-label">ชั้นปี</label>
+          <input
+            id="year"
+            type="number"
+            class="form-control"
+            placeholder="1-4"
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="major" class="form-label">สาขาวิชา</label>
+          <input
+            id="major"
+            type="text"
+            class="form-control"
+            placeholder="วิศวกรรมคอมพิวเตอร์"
+          />
+        </div>
+        <div class="col-md-2">
+          <button id="addBtn" class="btn btn-primary w-100">➕ เพิ่ม</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card p-3 mb-4">
+      <h5>🔍 ค้นหาด้วยชื่อ</h5>
+      <div class="input-group">
+        <input
+          id="searchName"
+          type="text"
+          class="form-control"
+          placeholder="ป้อนชื่อที่ต้องการค้นหา"
+        />
+        <button id="searchNameBtn" class="btn btn-success">ค้นหา</button>
+      </div>
+    </div>
+    <div class="card p-3 mb-4">
+      <h5>🔍 ค้นหาด้วยสาขาวิชา</h5>
+      <div class="input-group">
+        <input
+          id="searchMajor"
+          type="text"
+          class="form-control"
+          placeholder="ป้อนสาขาที่ต้องการค้นหา"
+        />
+        <button id="searchMajorBtn" class="btn btn-warning">ค้นหา</button>
+      </div>
+    </div>
+    
+
+    <div class="card p-3 mb-4">
+      <h5>🔍 ค้นหาด้วยอีเมล</h5>
+      <div class="input-group">
+        <input
+          id="searchEmail"
+          type="text"
+          class="form-control"
+          placeholder="ป้อนอีเมลที่ต้องการค้นหา"
+        />
+        <button id="searchEmailBtn" class="btn btn-info">ค้นหา</button>
+      </div>
+    </div>
+
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th width="120">ID</th>
+          <th width="100">คำนำหน้า</th>
+          <th>ชื่อ</th>
+          <th>นามสกุล</th>
+          <th>อีเมล</th>
+          <th width="80">ชั้นปี</th>
+          <th width="120">สาขา</th>
+        </tr>
+      </thead>
+      <tbody id="studentTableBody"></tbody>
+    </table>
+
+    <script type="module" src="./dist/app.js"></script>
+  </body>
+</html>
